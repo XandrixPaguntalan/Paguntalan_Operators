@@ -19,11 +19,21 @@ public class MainActivity extends AppCompatActivity {
         int birthDay = 20;
         int birthYear = 2003;
 
-        int currentMonth = 1;
-        int currentDay = 26;
+        int currentMonth = 2;
+        int currentDay = 9;
         int currentYear = 2021;
 
         int myageinmonths, myageindays, myageinyears;
+
+        if(birthMonth > currentMonth){
+            currentMonth += 12;
+            currentYear -= 1;
+        }
+
+        if(birthDay > currentDay){
+            currentDay += 31;
+            currentMonth -= 1;
+        }
 
         myageinmonths = currentMonth - birthMonth;
         myageindays = currentDay - birthDay;
